@@ -36,10 +36,14 @@ module.exports = function (grunt) {
                 tasks: ['smushit']
             }
         },
-        smushit: {
-            mygroup: {
-                src: ['public/img/**/*.png','public/img/**/*.jpg'],
-                dest: 'public/img'
+        imagemin: {                          // Task
+            dynamic: {                         // Another target
+                files: [{
+                    expand: true,                  // Enable dynamic expansion
+                    cwd: 'public/img/',                   // Src matches are relative to this path
+                    src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+                    dest: 'public/img/'                  // Destination path prefix
+                }]
             }
         }
     });
@@ -51,5 +55,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-smushit');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 };

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "express": "^4.13.2",
+    "grunt-contrib-imagemin": "^0.9.4",
     "grunt-contrib-less": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
