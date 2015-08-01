@@ -1,0 +1,29 @@
+.parallax {
+    width: 100%;
+    position: relative;
+    height: 1400px;
+    z-index: 10;
+    //.gradient(#c1f7f3, #e4f8f6);
+    .gradient(#b6e9f8, #e4f8f6);
+    
+    & > div {
+        background-position: center top;
+        //background-size: 1968px 1018px;
+        background-repeat: repeat-x;
+        position: fixed;
+        height: 1018px;
+        width: 100%;
+        transform: translate3d(0px, 0px, 0px);
+    }
+    
+    .generate-layers(@n, @i: 1) when (@i =< @n) {
+        #layer@{i} {
+            background-image: url('/img/para/@{i}.png'); 
+        }
+        .generate-layers(@n, (@i + 1));
+    }
+    
+    .generate-layers(9);
+
+}
+
