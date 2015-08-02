@@ -22,7 +22,7 @@ html(lang="en")
         .container
             .middle-col.panel
                 h2 Portfolio
-                #items.js-masonry
+                #items
                     each item in items
                         include item.jade
                 h2 About
@@ -35,5 +35,6 @@ html(lang="en")
         .overlay
         
         script(src="//code.jquery.com/jquery-2.1.4.min.js")
+        script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js")
         script(src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js")
         script(src="site.js")
