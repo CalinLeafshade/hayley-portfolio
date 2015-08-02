@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
     
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
     left: 0;
     top: 0;
     z-index: 500;
@@ -23,16 +23,21 @@
     
     .contents {
         border-radius: 4px;
-        transition: all 0.5s ease-in-out;
-        transform: scale(0.8);
+        transition: all 0.2s ease-in-out;
+        transform: translate(0,20px) scale(0.8);
         background: @white;
         width: 960px;
-        height: 75%;
+        //height: 75%;
         margin: auto;
         margin-top: 6%;
         overflow-y: auto;
         box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
-        padding: 15px;
+        //padding: 15px;
+        
+        .description {
+            padding: 20px 0;
+            margin-left: 20px;
+        }
         
         .close {
             line-height: 1em;
@@ -53,11 +58,13 @@
             margin-bottom: -8px;
             font-family: "Alegreya Sans",sans-serif;
             margin-left: -2px;
+            font-weight: 900;
         }
         
         img {
-            max-width: 400px;
-            box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+            max-width: 100%;
+            display: block;
+            //box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
         }
         
         .skills {
@@ -66,15 +73,15 @@
             padding: 0;
             list-style: none;
             margin-bottom: 10px;
-            color: @black;
+            color: lighten(@black, 30%);
 
             li {
                 display: inline;
                 
                 + li:before {
-                  content: "|\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+                  content: "\00a0|\00a0"; // Unicode space added since inline-block means non-collapsing white-space
                   padding: 0 2px;
-                  color: lighten(@black, 10%);
+                  color: lighten(@black, 40%);
                 }
             }   
         }

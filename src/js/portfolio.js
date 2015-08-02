@@ -19,28 +19,17 @@ $(function() {
         var $this = $(this);
         var id = $this.data('id');
         var item = $this.data('item');
-        var $popup;
+        var $popup = $('.portfolio-popup');
         
-        $popups.each(function(i,e) {
-            
-            $e = $(e);
-            if ($e.data('for').indexOf(id) > -1) {
-                $popup = $e;
-                return false;
-            }
-            
+        $popup.find('h2').text(item.title);
+        $popup.find('img').attr('src', "/img/portfolio/" + item.img);
+        var $skills = $popup.find('.skills');
+        $skills.html("");
+        item.skills.forEach(function(skill) {
+            $('<li>').text(skill).appendTo($skills);
         });
-        
-        if ($popup) {
-            $popup.find('h2').text(item.title);
-            $popup.find('img').attr('src', "/img/" + item.img);
-            var $skills = $popup.find('.skills');
-            $skills.html("");
-            item.skills.forEach(function(skill) {
-                $('<li>').text(skill).appendTo($skills);
-            });
-            $popup.addClass('shown');   
-        }
+        $popup.addClass('shown');   
+
         
     });
     

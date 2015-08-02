@@ -44,13 +44,21 @@ module.exports = function (grunt) {
             }
         },
         image_resize: {
-            resize: {
+            thumbnails: {
                 options: {
                     width: 220,
                     height: 400
                 },
-                src: 'public/img/*.{png,jpg,gif}',
+                src: 'public/img/portfolio/*.{png,jpg}',
                 dest: 'public/img/thumbs/'
+            },
+            resize: {
+                options: {
+                    width: 460,
+                    height: 1080
+                },
+                src: 'public/img/portfolio/*.{png,jpg}',
+                dest: 'public/img/portfolio/'
             }
         }
     });

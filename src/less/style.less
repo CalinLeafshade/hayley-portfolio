@@ -55,6 +55,16 @@ h2, h3 {
     background-repeat: no-repeat;
 }
 
+.selfie {
+    width: 50%;
+    float: left;
+    margin-right: 15px;
+}
+
+.clear {
+    clear: both;   
+}
+
 .line {
     background: url('/img/line1.png');
     height: 10px;
@@ -105,8 +115,30 @@ h2, h3 {
     }
 }
 
+section#contact {
+    margin-top: 15px;
+    color: @black;   
+    .big {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: -0.04em;   
+    }
+    
+    .social{
+        
+        text-align: center;
+        font-size: 80px;
+        
+        a {
+            margin: 10px;
+        }
+    }   
+    
+}
+
 .white-panel {
-    background-color: @white;
+    background-color: rgba(255,255,255,0.5);
     color: @black;
     border-radius: 15px;
     padding: 15px;

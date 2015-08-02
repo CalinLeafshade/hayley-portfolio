@@ -13,122 +13,145 @@ var items = [
         id: 1,
         skills: ["Design", "Photography"],
         img: "1.png",
-        title: "Lorem Ipsum",
+        title: "Open Event Flyer [Front]",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 2,
         skills: ["Design", "Illustration"],
         img: "2.png",
-        title: "Lorem Ipsum",
+        title: "Business Card",
+        blurb: "Lorem Ipsum etc etc"
+    },
+    {
+        id: 19,
+        skills: ["Web Design"],
+        img: "19.png",
+        title: "Catalyst Studios",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 3,
         skills: ["Character Design", "Illustration"],
         img: "3.png",
-        title: "Lorem Ipsum",
+        title: "Catapult Games Logo",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 4,
         skills: ["Design", "Illustration"],
         img: "4.jpg",
-        title: "Lorem Ipsum",
+        title: "Digital Workshop Poster",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 5,
         skills: ["Design"],
         img: "5.png",
-        title: "Lorem Ipsum",
+        title: "Open Event Flyer",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 6,
         skills: ["Design"],
         img: "6.png",
-        title: "Lorem Ipsum",
+        title: "Open Event Flyer [Back]",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 7,
         skills: ["Design"],
         img: "7.jpg",
-        title: "Lorem Ipsum",
+        title: "Portfolio Advice Cover",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 8,
         skills: ["Design"],
         img: "8.jpg",
-        title: "Lorem Ipsum",
+        title: "Event Poster",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 9,
         skills: ["Illustration"],
         img: "9.png",
-        title: "Lorem Ipsum",
+        title: "Illustration Commission",
+        blurb: "Lorem Ipsum etc etc"
+    },
+    {
+        id: 17,
+        skills: ["Web Design"],
+        img: "17.png",
+        title: "Catalyst Studios",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 10,
         skills: ["Character Design", "Animation"],
         img: "10.gif",
-        title: "Lorem Ipsum",
+        title: "Kass Seti Design",
+        blurb: "Lorem Ipsum etc etc"
+    },
+    {
+        id: 20,
+        skills: ["Web Design"],
+        img: "20.png",
+        title: "Catalyst Studios",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 11,
         skills: ["Design"],
         img: "11.png",
-        title: "Lorem Ipsum",
-        blurb: "Lorem Ipsum etc etc"
-    },
-    {
-        id: 12,
-        skills: ["Design"],
-        img: "12.jpg",
-        title: "Lorem Ipsum",
+        title: "Open Event Poster",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 13,
         skills: ["Design"],
-        img: "13.jpg",
-        title: "Lorem Ipsum",
+        img: "13.png",
+        title: "Event Invite",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 14,
         skills: ["Design"],
         img: "14.png",
-        title: "Lorem Ipsum",
+        title: "Open Event Poster",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 15,
         skills: ["Illustration"],
         img: "15.png",
-        title: "Lorem Ipsum",
+        title: "Tree & Fairy",
         blurb: "Lorem Ipsum etc etc"
     },
     {
         id: 16,
         skills: ["Design"],
         img: "16.png",
-        title: "Lorem Ipsum",
+        title: "U Shop Poster",
+        blurb: "Lorem Ipsum etc etc"
+    },
+    {
+        id: 21,
+        skills: ["Design", "Illustration"],
+        img: "21.png",
+        title: "Latency Poster",
+        blurb: "Lorem Ipsum etc etc"
+    },
+    {
+        id: 18,
+        skills: ["Illustration"],
+        img: "18.png",
+        title: "Environment Art",
         blurb: "Lorem Ipsum etc etc"
     }
-]
-
-
+];
 
 app.get('/', function(req, res) {
-    
-    
-    
     res.render('main', {items: items});
 });
 

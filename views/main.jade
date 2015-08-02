@@ -22,40 +22,49 @@ html(lang="en")
                 p.subtitle Artist / Designer
         .main-container
             .middle-col.panel.container
-                .line
-                h2.light Portfolio
-                .line
-                .break-20
-                #items
-                    each item in items
-                        include item.jade
-                .line
-                h2 About
-                .line
-                .break-20
-                .white-panel
-                    p.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet sapien quis sapien blandit gravida id in lacus. Sed non mattis dui. Aliquam ut lacus bibendum magna auctor volutpat. Integer id iaculis sapien. Integer sagittis rhoncus risus sed facilisis. Sed eget rhoncus quam, in dapibus nulla. Nunc vitae euismod arcu. Pellentesque eget diam vel justo ultricies ornare. Aliquam erat volutpat. Proin vel condimentum quam. Quisque efficitur sagittis nisi sit amet pharetra. Ut sollicitudin arcu vulputate, efficitur arcu in, volutpat est. 
-                .line
-                h2 Contact
-                .line
-                .break-20
-                .white-panel
-                    p.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet sapien quis sapien blandit gravida id in lacus. Sed non mattis dui. Aliquam ut lacus bibendum magna auctor volutpat. Integer id iaculis sapien. Integer sagittis rhoncus risus sed facilisis. Sed eget rhoncus quam, in dapibus nulla. Nunc vitae euismod arcu. Pellentesque eget diam vel justo ultricies ornare. Aliquam erat volutpat. Proin vel condimentum quam. Quisque efficitur sagittis nisi sit amet pharetra. Ut sollicitudin arcu vulputate, efficitur arcu in, volutpat est. 
+                section#portfolio
+                    .line
+                    h2.light Portfolio
+                    .line
+                    .break-20
+                    #items
+                        each item in items
+                            include item.jade
+                section#about
+                    .line
+                    h2 About
+                    .line
+                    .break-20
+                    .white-panel
+                        img.selfie(src="/img/selfie.jpg")
+                        p.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet sapien quis sapien blandit gravida id in lacus. Sed non mattis dui. Aliquam ut lacus bibendum magna auctor volutpat. Integer id iaculis sapien. Integer sagittis rhoncus risus sed facilisis. Sed eget rhoncus quam, in dapibus nulla. Nunc vitae euismod arcu. Pellentesque eget diam vel justo ultricies ornare. Aliquam erat volutpat. Proin vel condimentum quam. Quisque efficitur sagittis nisi sit amet pharetra. Ut sollicitudin arcu vulputate, efficitur arcu in, volutpat est. 
+                        .clear
+                section#contact
+                    .line
+                    h2 Contact
+                    .line
+                    .break-20
+                    .white-panel
+                        p.big Hayley likes messages. You can contact her thusly:
+                        .social
+                            a(href="http://www.twitter.com/@sookiesock")
+                                i.fa.fa-twitter
+                            a(href="mailto:griffiths.hayley@googlemail.com")
+                                i.fa.fa-envelope
         .overlay
-        .portfolio-popup(data-for="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]")
+        .portfolio-popup
             .popup-overlay
             .contents
                 a.close(href="#")
                     i.fa.fa-times
                 .row
                     .six.columns
+                        img
+                    .six.columns.description
                         h2
                         ul.skills
                         p
-                    .six.columns
-                        img
         script(src="//code.jquery.com/jquery-2.1.4.min.js")
         script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js")
         script(src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js")
