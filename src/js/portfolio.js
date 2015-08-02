@@ -34,6 +34,11 @@ $(function() {
         if ($popup) {
             $popup.find('h2').text(item.title);
             $popup.find('img').attr('src', "/img/" + item.img);
+            var $skills = $popup.find('.skills');
+            $skills.html("");
+            item.skills.forEach(function(skill) {
+                $('<li>').text(skill).appendTo($skills);
+            });
             $popup.addClass('shown');   
         }
         

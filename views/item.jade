@@ -2,5 +2,8 @@ a.item(href="#" data-id=item.id, data-item=item)
     img(src="/img/thumbs/" + item.img)
     .description
         h3= item.title
-        p= item.blurb
+        ul.skills 
+            each skill in item.skills
+                li= skill
+        //p= item.blurb
         

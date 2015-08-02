@@ -46,7 +46,7 @@ $(function () {
     $window.on("scroll", onScroll);
     
     $window.load(function() {
-        $('.overlay').fadeOut();
+        $('.overlay').fadeOut(800);
     });
     
 });

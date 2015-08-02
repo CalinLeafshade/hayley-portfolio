@@ -15,6 +15,8 @@
     box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
     border: 3px solid darken(@white, 50%);
     
+    
+    
     img {
         max-width: 214px;
         display: block;
@@ -43,6 +45,25 @@
             transition: all 0.4s ease-in-out 0s; 
         }
         
+        .skills {
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            color: darken(@white, 10%);
+
+            li {
+                display: inline;
+                
+                + li:before {
+                  content: "|\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+                  padding: 0 2px;
+                  color: fade(@white, 20%)
+                }
+            }   
+        }
+        
         h3 {
             font-size: 22px;
             margin-top: 0;
@@ -55,6 +76,7 @@
         
         p {
             margin-top: 5px;
+            font-size: 14px;
         }   
     }
     

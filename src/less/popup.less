@@ -49,12 +49,34 @@
         
         h2 {
             color: @black;
-            margin-top: 0;
+            margin-top: -10px;
+            margin-bottom: -8px;
+            font-family: "Alegreya Sans",sans-serif;
+            margin-left: -2px;
         }
         
         img {
             max-width: 400px;
             box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+        }
+        
+        .skills {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            color: @black;
+
+            li {
+                display: inline;
+                
+                + li:before {
+                  content: "|\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+                  padding: 0 2px;
+                  color: lighten(@black, 10%);
+                }
+            }   
         }
         
     }
