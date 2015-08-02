@@ -34,7 +34,7 @@ module.exports = function (grunt) {
             },
             img: {
                 files: ['public/img/**/*.png','public/img/**/*.jpg'],
-                tasks: ['smushit']
+                tasks: ['imagemin']
             }
         },
         imagemin: {                          // Task
@@ -49,7 +49,7 @@ module.exports = function (grunt) {
         }
     });
     
-    grunt.registerTask("default", ['uglify', 'less', 'smushit']);
+    grunt.registerTask("default", ['uglify', 'less', 'imagemin']);
     
     // The following line loads the grunt plugins.
     // This line needs to be at the end of this this file.
