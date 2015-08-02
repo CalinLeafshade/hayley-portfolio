@@ -2,7 +2,7 @@ doctype html
 html(lang="en")
     head
         link(rel="stylesheet", href="style.css", type='text/css')
-        link(href='http://fonts.googleapis.com/css?family=Amatic+SC|Merriweather|Alegreya+Sans:400,900' rel='stylesheet' type='text/css')
+        link(href='http://fonts.googleapis.com/css?family=Open+Sans|Amatic+SC|Alegreya+Sans:400,900' rel='stylesheet' type='text/css')
         title Hayley Griffiths
     body
         .parallax
@@ -21,7 +21,19 @@ html(lang="en")
                 p.subtitle Artist / Designer
         .container
             .middle-col.panel
-                h1 Hayley Griffiths
+                h2 Portfolio
+                #items.js-masonry
+                    each item in items
+                        include item.jade
+                h2 About
+                p.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet sapien quis sapien blandit gravida id in lacus. Sed non mattis dui. Aliquam ut lacus bibendum magna auctor volutpat. Integer id iaculis sapien. Integer sagittis rhoncus risus sed facilisis. Sed eget rhoncus quam, in dapibus nulla. Nunc vitae euismod arcu. Pellentesque eget diam vel justo ultricies ornare. Aliquam erat volutpat. Proin vel condimentum quam. Quisque efficitur sagittis nisi sit amet pharetra. Ut sollicitudin arcu vulputate, efficitur arcu in, volutpat est. 
+                h2 Contact
+                p.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet sapien quis sapien blandit gravida id in lacus. Sed non mattis dui. Aliquam ut lacus bibendum magna auctor volutpat. Integer id iaculis sapien. Integer sagittis rhoncus risus sed facilisis. Sed eget rhoncus quam, in dapibus nulla. Nunc vitae euismod arcu. Pellentesque eget diam vel justo ultricies ornare. Aliquam erat volutpat. Proin vel condimentum quam. Quisque efficitur sagittis nisi sit amet pharetra. Ut sollicitudin arcu vulputate, efficitur arcu in, volutpat est. 
+        footer
         .overlay
+        
         script(src="//code.jquery.com/jquery-2.1.4.min.js")
+        script(src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js")
         script(src="site.js")

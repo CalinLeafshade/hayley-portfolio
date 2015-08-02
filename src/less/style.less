@@ -4,6 +4,8 @@
 @import "parallax.less";
 @import "header.less";
 @import "overlay.less";
+@import "item.less";
+@import "footer.less";
 
 .gradient (@startColor: #eee, @endColor: white) {
 	background-color: @startColor;
@@ -26,14 +28,18 @@ html, body {
 body {
     padding: 0;
     margin: 0;
-    .gradient(#d0fdf9, white);
+    background: @white;
     color: @white;
-    font-family: "Merriweather", serif;
+    font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+     
 }
 
 .container {
-    height: 1000px;
     background: #95a5a6;
+    .gradient(#95a5a6, @white);
     position: relative;
     z-index: 15;
 }
@@ -44,8 +50,43 @@ body {
 }
 
 .panel {
-    background-color: @white;
+    h2 {
+        border-top: 1px solid darken(@blue, 20%);
+        border-bottom: 1px solid darken(@blue, 20%);
+        text-align: center;
+        margin-left: 5px;   
+        font-size: 48px;
+        font-family: "Alegreya Sans", sans-serif;
+        font-weight: 900;
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);  
+        color: @black;
+        
+        &.dark {
+            //color: darken(@blue, 20%);   
+        }
+        
+    }
+    //background-color: @white;
     color: @black;
     border-radius: 15px;
     padding: 15px;
+    
+    & > p {
+        line-height: 1.5em;
+        
+    }
+}
+
+#items  {
+    
+    &:after {
+        content: "."; 
+        visibility: hidden; 
+        display: block; 
+        height: 0; 
+        clear: both;
+    }
+    
+
+    
 }
