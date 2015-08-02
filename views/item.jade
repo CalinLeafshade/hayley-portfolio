@@ -1,5 +1,6 @@
-.item
-    img(src="/img/" + item.img)
+a.item(href="#" data-id=item.id, data-item=item)
+    img(src="/img/thumbs/" + item.img)
     .description
         h3= item.title
         p= item.blurb
+        

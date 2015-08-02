@@ -31,10 +31,6 @@ module.exports = function (grunt) {
             css: {
                 files: ['src/less/**/*.less'],
                 tasks: ['less']
-            },
-            img: {
-                files: ['public/img/**/*.png','public/img/**/*.jpg'],
-                tasks: ['imagemin']
             }
         },
         imagemin: {                          // Task
@@ -45,6 +41,16 @@ module.exports = function (grunt) {
                     src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
                     dest: 'public/img/'                  // Destination path prefix
                 }]
+            }
+        },
+        image_resize: {
+            resize: {
+                options: {
+                    width: 220,
+                    height: 400
+                },
+                src: 'public/img/*.{png,jpg,gif}',
+                dest: 'public/img/thumbs/'
             }
         }
     });
@@ -57,4 +63,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-image-resize');
 };

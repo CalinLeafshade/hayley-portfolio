@@ -15,5 +15,8 @@
     "grunt-contrib-watch": "*",
     "grunt-smushit": "^1.3.0",
     "jade": "^1.11.0"
+  },
+  "devDependencies": {
+    "grunt-image-resize": "^1.0.0"
   }
 }

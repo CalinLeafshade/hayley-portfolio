@@ -2,7 +2,8 @@ doctype html
 html(lang="en")
     head
         link(rel="stylesheet", href="style.css", type='text/css')
-        link(href='http://fonts.googleapis.com/css?family=Open+Sans|Amatic+SC|Alegreya+Sans:400,900' rel='stylesheet' type='text/css')
+        link(href='http://fonts.googleapis.com/css?family=Open+Sans|Amatic+SC:700|Alegreya+Sans:400,900' rel='stylesheet' type='text/css')
+        link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css", rel="stylesheet")
         title Hayley Griffiths
     body
         .parallax
@@ -21,19 +22,34 @@ html(lang="en")
                 p.subtitle Artist / Designer
         .container
             .middle-col.panel
-                h2 Portfolio
+                .line
+                h2.light Portfolio
+                .line
+                .break-20
                 #items
                     each item in items
                         include item.jade
+                .line
                 h2 About
+                .line
+                .break-20
                 p.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet sapien quis sapien blandit gravida id in lacus. Sed non mattis dui. Aliquam ut lacus bibendum magna auctor volutpat. Integer id iaculis sapien. Integer sagittis rhoncus risus sed facilisis. Sed eget rhoncus quam, in dapibus nulla. Nunc vitae euismod arcu. Pellentesque eget diam vel justo ultricies ornare. Aliquam erat volutpat. Proin vel condimentum quam. Quisque efficitur sagittis nisi sit amet pharetra. Ut sollicitudin arcu vulputate, efficitur arcu in, volutpat est. 
+                .line
                 h2 Contact
+                .line
+                .break-20
                 p.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet sapien quis sapien blandit gravida id in lacus. Sed non mattis dui. Aliquam ut lacus bibendum magna auctor volutpat. Integer id iaculis sapien. Integer sagittis rhoncus risus sed facilisis. Sed eget rhoncus quam, in dapibus nulla. Nunc vitae euismod arcu. Pellentesque eget diam vel justo ultricies ornare. Aliquam erat volutpat. Proin vel condimentum quam. Quisque efficitur sagittis nisi sit amet pharetra. Ut sollicitudin arcu vulputate, efficitur arcu in, volutpat est. 
-        footer
         .overlay
-        
+        .portfolio-popup(data-for="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]")
+            .popup-overlay
+            .contents
+                a.close(href="#")
+                    i.fa.fa-times
+                h2
+                img
+                p
         script(src="//code.jquery.com/jquery-2.1.4.min.js")
         script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js")
         script(src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js")
